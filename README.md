@@ -39,26 +39,25 @@ A full-stack Order Management System built as a technical assessment demonstrati
 ### Clean Architecture Layers
 
 ┌─────────────────────────────────────────┐
-│ Presentation Layer │
-│ (Angular Frontend + ASP.NET Core API) │
-└───────────────────┬─────────────────────┘
-│
-┌───────────────────▼─────────────────────┐
-│ Application Layer │
-│ (Use Cases, DTOs, Interfaces) │
-└───────────────────┬─────────────────────┘
-│
-┌───────────────────▼─────────────────────┐
-│ Domain Layer │
-│ (Entities, Value Objects, Business) │
-└───────────────────┬─────────────────────┘
-│
-┌───────────────────▼─────────────────────┐
-│ Infrastructure Layer │
-│ (EF Core, Database, External Services) │
-└─────────────────────────────────────────┘
+<br>│ Presentation Layer │
+<br>│ (Angular Frontend + ASP.NET Core API) │
+<br>└───────────────────┬─────────────────────┘
+<br>│
+<br>┌───────────────────▼─────────────────────┐
+<br>│ Application Layer │
+<br>│ (Use Cases, DTOs, Interfaces) │
+<br>└───────────────────┬─────────────────────┘
+<br>│
+<br>┌───────────────────▼─────────────────────┐
+<br>│ Domain Layer │
+<br>│ (Entities, Value Objects, Business) │
+<br>└───────────────────┬─────────────────────┘
+<br>│
+<br>┌───────────────────▼─────────────────────┐
+<br>│ Infrastructure Layer │
+<br>│ (EF Core, Database, External Services) │
+<br>└─────────────────────────────────────────┘
 
-text
 
 ### Domain-Driven Design Implementation
 - **Rich Domain Models** (No anemic models)
@@ -106,51 +105,50 @@ text
 
 ## 📁 Project Structure
 OrderManagementSystem/
-├── Backend/
-│ ├── OrderManagement.API/ # API Controllers, Middleware
-│ │ ├── Controllers/
-│ │ ├── Program.cs
-│ │ └── appsettings.json
-│ ├── OrderManagement.Application/ # Use Cases, DTOs
-│ │ ├── DTOs/
-│ │ ├── Interfaces/
-│ │ ├── Services/
-│ │ └── Exceptions/
-│ ├── OrderManagement.Domain/ # Business Logic
-│ │ ├── Entities/
-│ │ ├── ValueObjects/
-│ │ ├── Enums/
-│ │ └── Exceptions/
-│ ├── OrderManagement.Infrastructure/ # Data Access
-│ │ ├── Data/
-│ │ ├── Persistence/
-│ │ ├── Migrations
-│ │ └── Repositories.cs
-│ │         
-│ └── OrderManagement.sln # Solution File
-├── Frontend/
-│ ├── src/
-│ │ ├── app/
-│ │ │ ├── core/ # Shared Services & Models
-│ │ │ │ ├── models/
-│ │ │ │ └── services/
-│ │ │ ├── Products/ # Feature Modules
-│ │ │ │── orders/
-│ │ │ │
-│ │ │ └── shared/ # Shared Components
-│ │ ├── assets/
-│ │ ├── environments/
-│ │ └── index.html
-│ ├── angular.json
-│ ├── package.json
-│ └── README.md
-├── Documentation/
-│ ├── API_Endpoints.md
-│ └── Architecture_Decisions.md
-├── .gitignore
-└── README.md (this file)
+<br>├── Backend/
+<br>│ ├── OrderManagement.API/ # API Controllers, Middleware
+<br>│ │ ├── Controllers/
+<br>│ │ ├── Program.cs
+<br>│ │ └── appsettings.json
+<br>│ ├── OrderManagement.Application/ # Use Cases, DTOs
+<br>│ │ ├── DTOs/
+<br>│ │ ├── Interfaces/
+<br>│ │ ├── Services/
+<br>│ │ └── Exceptions/
+<br>│ ├── OrderManagement.Domain/ # Business Logic
+<br>│ │ ├── Entities/
+<br>│ │ ├── ValueObjects/
+<br>│ │ ├── Enums/
+<br>│ │ └── Exceptions/
+<br>│ ├── OrderManagement.Infrastructure/ # Data Access
+<br>│ │ ├── Data/
+<br>│ │ ├── Persistence/
+<br>│ │ ├── Migrations
+<br>│ │ └── Repositories.cs
+<br>│ │         
+<br>│ └── OrderManagement.sln # Solution File
+<br>├── Frontend/
+<br>│ ├── src/
+<br>│ │ ├── app/
+<br>│ │ │ ├── core/ # Shared Services & Models
+<br>│ │ │ │ ├── models/
+<br>│ │ │ │ └── services/
+<br>│ │ │ ├── Products/ # Feature Modules
+<br>│ │ │ │── orders/
+<br>│ │ │ │
+<br>│ │ │ └── shared/ # Shared Components
+<br>│ │ ├── assets/
+<br>│ │ ├── environments/
+<br>│ │ └── index.html
+<br>│ ├── angular.json
+<br>│ ├── package.json
+<br>│ └── README.md
+<br>├── Documentation/
+<br>│ ├── API_Endpoints.md
+<br>│ └── Architecture_Decisions.md
+<br>├── .gitignore
+<br>└── README.md (this file)
 
-text
 
 ## 🚀 Setup & Installation
 
@@ -179,9 +177,9 @@ dotnet ef database update
 dotnet run
 Backend runs on: https://localhost:7067
 Swagger UI: https://localhost:7067/swagger
-
+```
 Frontend Setup
-bash
+```bash
 # 1. Navigate to Frontend directory
 cd frontend
 
@@ -194,8 +192,9 @@ npm install
 # 4. Run the Angular application
 ng serve
 Frontend runs on: http://localhost:4200
-
+```
 Database Seed Data
+```bash
 On first run, the system automatically seeds 5 sample products:
 
 Beef Burger - $120
@@ -207,10 +206,11 @@ Shawarma Sandwich - $65
 Margherita Pizza - $110
 
 French Fries - $30
-
+```
 🔌 API Documentation
 Products Endpoints
 Method	Endpoint	Description
+```bash
 GET	/api/products	Get all products
 GET	/api/products/{id}	Get product by ID
 POST	/api/products	Create new product
@@ -222,6 +222,7 @@ POST	/api/orders	Create new order
 POST	/api/orders/{id}/items	Add item to order
 DELETE	/api/orders/{id}/items/{productId}	Remove item from order
 POST	/api/orders/{id}/complete	Mark order as completed
+
 Sample API Request
 json
 POST /api/orders
@@ -234,58 +235,47 @@ POST /api/orders
     }
   ]
 }
+```
 🖥️ Frontend Screens
+```bash
 1. Products Screen (/products)
-Displays all available products
-
-Shows product name, description, and price
-
-Responsive card layout
+- Displays all available products
+- Shows product name, description, and price
+- Responsive card layout
 
 2. Create Order Screen (/orders/create)
-Select customer from dropdown
-
-Add products with quantities
-
-Real-time total calculation
-
-Form validation
+- Select customer from dropdown
+- Add products with quantities
+- Real-time total calculation
+- Form validation
 
 3. Order Details Screen (/orders/:id)
-View complete order information
-
-See order items with quantities and prices
-
-Complete order button (for pending orders)
-
-Order status display
+- View complete order information
+- See order items with quantities and prices
+- Complete order button (for pending orders)
+- Order status display
+```
 
 📊 Business Rules
+```bash
 Domain Rules
-Product Price: Must be ≥ 0
-
-Order Total: Derived dynamically, not persisted
-
-Order Status: Completed orders cannot be modified
-
-Item Quantity: Must be > 0
-
-Customer Email: Must be valid format
+- Product Price: Must be ≥ 0
+- Order Total: Derived dynamically, not persisted
+- Order Status: Completed orders cannot be modified
+- Item Quantity: Must be > 0
+- Customer Email: Must be valid format
 
 Validation Rules
-Product name is required (max 200 characters)
-
-Order must have at least one item
-
-Cannot add/remove items from completed orders
-
-Unit price captured at time of order addition
-
+- Product name is required (max 200 characters)
+- Order must have at least one item
+- Cannot add/remove items from completed orders
+- Unit price captured at time of order addition
+```
 🧪 Testing
 Unit Tests
-bash
+```bash
 # Run backend tests
-cd Backend
+cd backend
 dotnet test
 
 # Test coverage includes:
@@ -293,102 +283,44 @@ dotnet test
 # - Business rules enforcement
 # - Value objects creation
 # - Aggregate behavior
+
 Test Scenarios
 ✅ Product creation with valid/invalid data
-
 ✅ Order creation and item management
-
 ✅ Business rule violations
-
 ✅ Value object validation
+```
 
 🔑 Key Decisions & Implementation Details
+```bash
 1. Why Clean Architecture?
-Separation of concerns: Each layer has clear responsibility
-
-Testability: Business logic is independent of frameworks
-
-Maintainability: Easy to modify without affecting other layers
-
-Flexibility: Can replace infrastructure without changing domain
+- Separation of concerns: Each layer has clear responsibility
+- Testability: Business logic is independent of frameworks
+- Maintainability: Easy to modify without affecting other layers
+- Flexibility: Can replace infrastructure without changing domain
 
 2. DDD Implementation Choices
-Rich Domain Models: Entities contain behavior, not just data
-
-Value Objects: Money, Email with validation logic
-
-Aggregate Design: Order as aggregate root managing OrderItems
-
-Repository Pattern: Abstraction over data access
+- Rich Domain Models: Entities contain behavior, not just data
+- Value Objects: Money, Email with validation logic
+- Aggregate Design: Order as aggregate root managing OrderItems
+- Repository Pattern: Abstraction over data access
 
 3. Frontend Architecture
-Feature-based structure: Modules for products and orders
-
-Service layer: All API communication through services
-
-No business logic in components: Only presentation logic
-
-Reactive programming: RxJS for state management
+- Feature-based structure: Modules for products and orders
+- Service layer: All API communication through services
+- No business logic in components: Only presentation logic
+- Reactive programming: RxJS for state management
 
 4. Database Design
-Code-first approach: EF Core migrations
-
-Relationships: Proper 1:Many and Many:1 relationships
-
-Seed data: Initial products for demonstration
-
-Concurrency: Optimistic concurrency handling
-
-👨‍💻 Author
+- Code-first approach: EF Core migrations
+- Relationships: Proper 1:Many and Many:1 relationships
+- Seed data: Initial products for demonstration
+- Concurrency: Optimistic concurrency handling
+```
+## 👨‍💻 Author
 Hossam Adel Mostafa
-Full-Stack Developer Technical Assessment
 
-Contact
+## Contact
 📧 Email: hossam.adel.dev@gmail.com
-
-💼 LinkedIn: inkedin.com/in/hossam-adel99
-
-🐙 GitHub: github.com/hossam-adel99
-
-📄 License
-This project was developed as a technical assessment. The code is provided for evaluation purposes.
-
-<div align="center"> <p>Built with ❤️ using ASP.NET Core & Angular</p> <p>Technical Assessment • Clean Architecture • DDD • SOLID Principles</p> </div> ```
-كيفية استخدام هذا الـ README:
-1. أنسخ الكود كله
-انسخ كل الكود السابق.
-
-2. أنشئ ملف README.md في المجلد الرئيسي
-bash
-cd D:\ALX_Final_Project
-notepad README.md
-3. الصق الكود واحفظ
-4. أضف الـ README لـ Git
-bash
-git add README.md
-git commit -m "Add comprehensive README documentation"
-git push
-معلومات إضافية يمكن إضافتها:
-أضف screenshots:
-markdown
-![Products Screen](screenshots/products.png)
-![Create Order](screenshots/create-order.png)
-![Order Details](screenshots/order-details.png)
-أضف badges إضافية:
-markdown
-![.NET](https://img.shields.io/badge/.NET-7.0-512BD4)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.2-3178C6)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3)
-أضف قسم Deployment (اختياري):
-markdown
-## ☁️ Deployment
-
-### Backend Deployment
-1. Publish to Azure App Service
-2. Configure SQL Server connection string
-3. Set environment variables
-
-### Frontend Deployment
-1. Build for production: `ng build --prod`
-2. Deploy to Azure Static Web Apps
-3. Configure API URL
+<br>💼 LinkedIn: inkedin.com/in/hossam-adel99
+<br>🐙 GitHub: github.com/hossam-adel99
