@@ -1,0 +1,7 @@
+<h2>Orders</h2>
+<ul>
+  <li *ngFor="let order of orders">
+    {{order.id}} - {{order.status}} - {{order.total}}
+    <a [routerLink]="['/orders', order.id]">View</a>
+  </li>
+</ul>

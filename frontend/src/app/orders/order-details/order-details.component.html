@@ -1,0 +1,20 @@
+<h2>Order Details</h2>
+<p>ID: {{order.id}}</p>
+<p>Status: {{order.status}}</p>
+<p>Total: {{order.total}}</p>
+
+<h3>Add Item</h3>
+<select [(ngModel)]="selectedProductId">
+  <option *ngFor="let p of products" [value]="p.id">{{p.name}} - {{p.price}}</option>
+</select>
+<input type="number" [(ngModel)]="quantity" min="1">
+<button (click)="addItem()">Add Item</button>
+
+<h3>Items</h3>
+<ul>
+  <li *ngFor="let item of order.items">
+    {{item.productName}} - {{item.quantity}} x {{item.unitPrice}} = {{item.subtotal}}
+  </li>
+</ul>
+
+<button (click)="completeOrder()" [disabled]="order.status==='Completed'">Complete Order</button>

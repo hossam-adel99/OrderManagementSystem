@@ -1,0 +1,22 @@
+# Backend Ignore
+**/bin/
+**/obj/
+**/.vs/
+**/*.user
+**/*.suo
+**/appsettings.Development.json
+
+# Frontend Ignore  
+**/node_modules/
+**/dist/
+**/.angular/
+**/coverage/
+
+# System
+.DS_Store
+Thumbs.db
+*.log
+
+# Database
+*.mdf
+*.ldf
